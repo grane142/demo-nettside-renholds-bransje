@@ -1542,11 +1542,12 @@
       .testimonials-header h2 { font-size: 26px; }
       .testimonials-grid { grid-template-columns: 1fr; gap: 24px; max-width: 100%; }
       .testimonial-thumb { display: none; }
-      .testimonial-carousel { max-width: 100%; min-width: 0; }
+      .testimonial-carousel { max-width: 100%; min-width: 0; overflow: visible; }
       .testimonial-cards {
         display: flex;
         gap: 12px;
         overflow-x: auto;
+        overflow-y: visible;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
@@ -1554,12 +1555,18 @@
       }
       .testimonial-cards::-webkit-scrollbar { display: none; }
       .testimonial-card {
-        min-width: calc(100% - 0px);
+        width: 100%;
+        min-width: 100%;
         flex-shrink: 0;
         padding: 24px;
         scroll-snap-align: start;
       }
-      .testimonial-quote { font-size: 15px; margin-bottom: 18px; }
+      .testimonial-quote {
+        font-size: 15px;
+        margin-bottom: 18px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
       .testimonial-author img { width: 40px; height: 40px; }
       .testimonial-author-name { font-size: 14px; }
       .testimonial-author-role { font-size: 12px; }
@@ -2383,7 +2390,8 @@
     function scrollTestimonials(direction) {
       const container = document.getElementById('testimonialCards');
       const card = container.querySelector('.testimonial-card');
-      const cardWidth = card.offsetWidth + 20;
+      const gap = window.innerWidth <= 767 ? 12 : 20;
+      const cardWidth = card.offsetWidth + gap;
       container.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
     }
     // Make testimonial cards scrollable
