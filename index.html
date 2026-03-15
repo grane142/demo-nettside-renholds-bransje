@@ -1447,9 +1447,23 @@
        RESPONSIVE - MOBILE
     =================================================== */
     @media (max-width: 767px) {
-      .container { padding: 0 16px; overflow: hidden; }
-      section { overflow: hidden; }
-      .marquee-banner { overflow: hidden; }
+      .container { padding: 0 16px; max-width: 100vw; }
+      /* Prevent any horizontal overflow on mobile */
+      section, .container, .about-grid, .services-grid, .why-us-grid,
+      .testimonials-grid, .booking-grid, .team-grid, .how-grid,
+      .faq-grid, .blog-grid, .footer-grid {
+        max-width: 100%;
+        min-width: 0;
+      }
+      /* Fix grid children from overflowing */
+      .why-us-grid > *,
+      .about-grid > *,
+      .services-grid > *,
+      .booking-grid > *,
+      .faq-grid > * {
+        min-width: 0;
+        max-width: 100%;
+      }
       h1 { font-size: 36px; }
       h2 { font-size: 28px; }
       h3 { font-size: 26px; }
@@ -1507,30 +1521,32 @@
       .accordion-body p { font-size: 14px; }
 
       /* Why Choose Us */
-      .why-us { overflow: hidden; }
+      .why-us .container { max-width: 100%; }
       .why-us-header h2 { font-size: 26px; }
-      .why-us-grid { grid-template-columns: 1fr; gap: 16px; }
+      .why-us-grid { grid-template-columns: 1fr; gap: 16px; max-width: 100%; }
+      .why-us-left,
+      .why-us-right { max-width: 100%; min-width: 0; }
       .why-us-stats-row { grid-template-columns: 1fr; gap: 16px; }
-      .stat-card { padding: 24px; min-height: 140px; }
+      .stat-card { padding: 24px; min-height: 140px; max-width: 100%; }
       .stat-number { font-size: 36px; }
       .stat-suffix { font-size: 28px; }
-      .stat-card-large { padding: 24px; overflow: hidden; }
-      .stat-card-eco { padding: 24px; overflow: hidden; }
-      .icon-marquee { overflow: hidden; }
+      .stat-card-large { padding: 24px; overflow: hidden; max-width: 100%; min-width: 0; }
+      .stat-card-eco { padding: 24px; overflow: hidden; max-width: 100%; min-width: 0; }
+      .icon-marquee { overflow: hidden; max-width: 100%; }
       .icon-circle { width: 48px; height: 48px; }
       .icon-circle img { width: 24px; height: 24px; }
       .reviewer-row img { width: 32px; height: 32px; }
-      .why-us-img-main { aspect-ratio: 4/3; }
+      .why-us-img-main { aspect-ratio: 4/3; max-width: 100%; }
 
       /* Testimonials */
-      .testimonials { overflow: hidden; }
       .testimonials-header h2 { font-size: 26px; }
-      .testimonials-grid { grid-template-columns: 1fr; gap: 24px; }
+      .testimonials-grid { grid-template-columns: 1fr; gap: 24px; max-width: 100%; }
       .testimonial-thumb img { aspect-ratio: 4/3; }
-      .testimonial-overlay { padding: 14px; gap: 12px; }
+      .testimonial-overlay { padding: 14px; gap: 12px; left: 12px; right: 12px; bottom: 12px; }
       .testimonial-stat-number { font-size: 28px; }
       .testimonial-stat-label { font-size: 12px; }
-      .testimonial-card { min-width: 100%; padding: 24px; }
+      .testimonial-cards { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .testimonial-card { min-width: 85%; padding: 24px; }
       .testimonial-quote { font-size: 15px; margin-bottom: 18px; }
       .testimonial-author img { width: 40px; height: 40px; }
       .testimonial-author-name { font-size: 14px; }
