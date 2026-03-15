@@ -1538,19 +1538,32 @@
       .reviewer-row img { width: 32px; height: 32px; }
       .why-us-img-main { aspect-ratio: 4/3; max-width: 100%; }
 
-      /* Testimonials */
+      /* Testimonials - stack thumb above, swipeable cards */
       .testimonials-header h2 { font-size: 26px; }
       .testimonials-grid { grid-template-columns: 1fr; gap: 24px; max-width: 100%; }
-      .testimonial-thumb img { aspect-ratio: 4/3; }
-      .testimonial-overlay { padding: 14px; gap: 12px; left: 12px; right: 12px; bottom: 12px; }
-      .testimonial-stat-number { font-size: 28px; }
-      .testimonial-stat-label { font-size: 12px; }
-      .testimonial-cards { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-      .testimonial-card { min-width: 85%; padding: 24px; }
+      .testimonial-thumb { display: none; }
+      .testimonial-carousel { max-width: 100%; min-width: 0; }
+      .testimonial-cards {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+      }
+      .testimonial-cards::-webkit-scrollbar { display: none; }
+      .testimonial-card {
+        min-width: calc(100% - 0px);
+        flex-shrink: 0;
+        padding: 24px;
+        scroll-snap-align: start;
+      }
       .testimonial-quote { font-size: 15px; margin-bottom: 18px; }
       .testimonial-author img { width: 40px; height: 40px; }
       .testimonial-author-name { font-size: 14px; }
       .testimonial-author-role { font-size: 12px; }
+      .testimonial-nav { justify-content: center; }
       .testimonial-nav button { width: 42px; height: 42px; }
 
       /* Booking */
