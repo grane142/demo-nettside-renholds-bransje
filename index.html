@@ -41,7 +41,7 @@
       --white-06: rgba(255,255,255,0.06);
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
 
     body {
       font-family: 'Urbanist', sans-serif;
@@ -1447,7 +1447,9 @@
        RESPONSIVE - MOBILE
     =================================================== */
     @media (max-width: 767px) {
-      .container { padding: 0 16px; }
+      .container { padding: 0 16px; overflow: hidden; }
+      section { overflow: hidden; }
+      .marquee-banner { overflow: hidden; }
       h1 { font-size: 36px; }
       h2 { font-size: 28px; }
       h3 { font-size: 26px; }
@@ -1505,19 +1507,23 @@
       .accordion-body p { font-size: 14px; }
 
       /* Why Choose Us */
+      .why-us { overflow: hidden; }
       .why-us-header h2 { font-size: 26px; }
       .why-us-grid { grid-template-columns: 1fr; gap: 16px; }
       .why-us-stats-row { grid-template-columns: 1fr; gap: 16px; }
       .stat-card { padding: 24px; min-height: 140px; }
       .stat-number { font-size: 36px; }
       .stat-suffix { font-size: 28px; }
-      .stat-card-large { padding: 24px; }
-      .stat-card-eco { padding: 24px; }
+      .stat-card-large { padding: 24px; overflow: hidden; }
+      .stat-card-eco { padding: 24px; overflow: hidden; }
+      .icon-marquee { overflow: hidden; }
       .icon-circle { width: 48px; height: 48px; }
       .icon-circle img { width: 24px; height: 24px; }
       .reviewer-row img { width: 32px; height: 32px; }
+      .why-us-img-main { aspect-ratio: 4/3; }
 
       /* Testimonials */
+      .testimonials { overflow: hidden; }
       .testimonials-header h2 { font-size: 26px; }
       .testimonials-grid { grid-template-columns: 1fr; gap: 24px; }
       .testimonial-thumb img { aspect-ratio: 4/3; }
