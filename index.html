@@ -1447,37 +1447,149 @@
        RESPONSIVE - MOBILE
     =================================================== */
     @media (max-width: 767px) {
-      .container { padding: 0 20px; }
-      h1 { font-size: 42px; }
-      h2 { font-size: 32px; }
-      h3 { font-size: 30px; }
-      h4 { font-size: 24px; }
+      .container { padding: 0 16px; }
+      h1 { font-size: 36px; }
+      h2 { font-size: 28px; }
+      h3 { font-size: 26px; }
+      h4 { font-size: 22px; }
       h5 { font-size: 18px; }
+      h6 { font-size: 17px; }
+      p { font-size: 15px; }
 
-      section { padding: 60px 0; }
+      section { padding: 50px 0; }
 
+      /* Navbar */
+      .navbar .container { height: 64px; }
+      .navbar-logo img { height: 36px; }
       .navbar-links { display: none; }
       .navbar-cta { display: none; }
       .hamburger { display: flex; }
+      .mobile-menu { top: 64px; padding: 20px 16px; gap: 8px; }
+      .mobile-menu a { font-size: 16px; padding: 12px 0; border-bottom: 1px solid var(--light-gray); }
 
-      .why-us-stats-row { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: 1fr; }
-      .blog-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .form-grid { grid-template-columns: 1fr; }
+      /* Hero */
+      .hero { padding: 64px 0 0; min-height: auto; }
+      .hero-content { padding: 50px 0 60px; }
+      .hero h1 { font-size: 32px; margin-bottom: 16px; }
+      .hero-subtitle { font-size: 14px; margin-bottom: 28px; }
+      .hero-cta { margin-bottom: 28px; }
+      .hero-cta .btn { font-size: 14px; padding: 12px 20px; }
+      .hero-reviews { flex-wrap: wrap; gap: 10px; justify-content: center; }
+      .hero-avatars img { width: 32px; height: 32px; }
+      .hero-rating { font-size: 13px; }
+      .hero-stars svg { width: 14px; height: 14px; }
+      .hero-ticker { display: none; }
+      .hero-fade-top { display: none; }
 
-      .blog-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+      /* Marquee */
+      .marquee-banner { padding: 12px 0; }
+      .marquee-track span { font-size: 13px; gap: 30px; }
 
+      /* About */
+      .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .about-left h2 { font-size: 26px; }
+      .about-left-img { margin-top: 20px; }
+      .about-right-img { aspect-ratio: 4/3; }
+      .btn { font-size: 14px; padding: 12px 20px; }
+
+      /* About video */
+      .about-video { padding: 0 0 50px 0; }
+      .about-video-wrapper { height: 220px; transform: none !important; border-radius: 10px; }
+
+      /* Services */
+      .services-grid { grid-template-columns: 1fr; gap: 30px; }
+      .accordion-header { padding: 16px 18px; }
+      .accordion-header h5 { font-size: 16px; }
+      .accordion-icon { width: 28px; height: 28px; font-size: 18px; }
+      .accordion-body-inner { padding: 0 18px 18px; }
+      .accordion-body p { font-size: 14px; }
+
+      /* Why Choose Us */
+      .why-us-header h2 { font-size: 26px; }
+      .why-us-grid { grid-template-columns: 1fr; gap: 16px; }
+      .why-us-stats-row { grid-template-columns: 1fr; gap: 16px; }
+      .stat-card { padding: 24px; min-height: 140px; }
       .stat-number { font-size: 36px; }
-      .testimonial-card { min-width: 100%; }
+      .stat-suffix { font-size: 28px; }
+      .stat-card-large { padding: 24px; }
+      .stat-card-eco { padding: 24px; }
+      .icon-circle { width: 48px; height: 48px; }
+      .icon-circle img { width: 24px; height: 24px; }
+      .reviewer-row img { width: 32px; height: 32px; }
 
-      .hero { padding: 100px 0 0; }
-      .hero h1 { font-size: 36px; }
-      .hero-layout { min-height: auto; padding: 60px 0; }
+      /* Testimonials */
+      .testimonials-header h2 { font-size: 26px; }
+      .testimonials-grid { grid-template-columns: 1fr; gap: 24px; }
+      .testimonial-thumb img { aspect-ratio: 4/3; }
+      .testimonial-overlay { padding: 14px; gap: 12px; }
+      .testimonial-stat-number { font-size: 28px; }
+      .testimonial-stat-label { font-size: 12px; }
+      .testimonial-card { min-width: 100%; padding: 24px; }
+      .testimonial-quote { font-size: 15px; margin-bottom: 18px; }
+      .testimonial-author img { width: 40px; height: 40px; }
+      .testimonial-author-name { font-size: 14px; }
+      .testimonial-author-role { font-size: 12px; }
+      .testimonial-nav button { width: 42px; height: 42px; }
 
-      .cta-section { padding: 60px 0; }
+      /* Booking */
+      .booking-grid { grid-template-columns: 1fr; gap: 30px; }
+      .booking-left h2 { font-size: 26px; margin-bottom: 20px; }
+      .booking-feature-icon { width: 42px; height: 42px; }
+      .booking-feature-icon img { width: 20px; height: 20px; }
+      .booking-feature h6 { font-size: 16px; }
+      .booking-feature p { font-size: 13px; }
+      .booking-form { padding: 24px; }
+      .booking-form h4 { font-size: 20px; margin-bottom: 18px; }
+      .form-grid { grid-template-columns: 1fr; gap: 12px; }
+      .form-group input,
+      .form-group select { padding: 12px 14px; font-size: 14px; }
+      .form-group label { font-size: 13px; }
+      .form-submit .btn { padding: 14px 20px; }
 
-      .about-video-wrapper { height: 300px; transform: none !important; }
+      /* Team */
+      .team-header h2 { font-size: 26px; }
+      .team-grid { grid-template-columns: 1fr; gap: 20px; }
+      .team-card-img img { aspect-ratio: 1; }
+      .team-card-info { padding: 16px; }
+      .team-card-name { font-size: 16px; }
+      .team-card-role { font-size: 13px; }
+      .team-card-social { width: 36px; height: 36px; }
+
+      /* CTA */
+      .cta-section { padding: 50px 0; }
+      .cta-content h2 { font-size: 26px; }
+
+      /* How it works */
+      .how-header h2 { font-size: 26px; }
+      .how-grid { grid-template-columns: 1fr; gap: 20px; }
+      .how-card-body { padding: 18px; }
+      .how-card-body h5 { font-size: 17px; }
+      .how-card-body p { font-size: 14px; }
+
+      /* FAQ */
+      .faq-grid { grid-template-columns: 1fr; gap: 30px; }
+      .faq-left h2 { font-size: 26px; }
+      .faq-question { padding: 16px 18px; }
+      .faq-question h6 { font-size: 15px; }
+      .faq-toggle { width: 28px; height: 28px; font-size: 18px; }
+      .faq-answer-inner { padding: 0 18px 18px; }
+      .faq-answer p { font-size: 14px; }
+
+      /* Blog */
+      .blog-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .blog-header h2 { font-size: 26px; }
+      .blog-grid { grid-template-columns: 1fr; gap: 20px; }
+      .blog-card-body { padding: 18px; }
+      .blog-card-body h5 { font-size: 16px; }
+      .blog-card-meta { font-size: 13px; }
+
+      /* Footer */
+      .footer { padding: 50px 0 0; }
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; margin-bottom: 40px; }
+      .footer-col h6 { font-size: 17px; margin-bottom: 14px; }
+      .footer-social a { width: 36px; height: 36px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; padding: 20px 0; font-size: 13px; }
+      .footer-logo-large { margin-bottom: 20px; }
     }
   </style>
 </head>
